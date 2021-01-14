@@ -113,7 +113,7 @@ def answer(call):
 		elif (call.data == 'CLEAR'):
 			clear_stats(call)
 		elif (call.data == 'DEPOSIT'):
-			message = bot.send_message(chat_id, f'💁🏻‍♀️ Введите *сумму* пополнения (от 250 грн до 5000 грн)', parse_mode="Markdown")
+			message = bot.send_message(chat_id, f'💁🏻‍♀️ Введите *сумму* пополнения (от 250 рублей до 5000 рублей)', parse_mode="Markdown")
 			bot.register_next_step_handler(message, deposit)
 		elif (call.data == 'STATUS'):
 			Thread = threading.Thread(target = user_status_pay, args = (call,))
